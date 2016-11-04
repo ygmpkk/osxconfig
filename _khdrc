@@ -1,0 +1,32 @@
+# vi-mode for non-terminal applications
+
+# 启用切换模式
+ctrl - f ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -e "mode activate vim"
+
+# 恢复默认模式
+vim + ctrl - f ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -e "mode activate default"
+
+# 映射上下左右hjkl
+ctrl - h : /usr/local/bin/khd -p "vim - left"
+ctrl - j : /usr/local/bin/khd -p "vim - down"
+ctrl - k : /usr/local/bin/khd -p "vim - up"
+ctrl - l : /usr/local/bin/khd -p "vim - right"
+
+# 映射移动窗口hl左右
+shift + ctrl - h : /usr/local/bin/khd -p "vim + ctrl - left"
+shift + ctrl - l : /usr/local/bin/khd -p "vim + ctrl - right"
+
+# 到行的a头和e尾
+ctrl - a : /usr/local/bin/khd -p "vim + cmd - left"
+ctrl - e : /usr/local/bin/khd -p "vim + cmd - right"
+
+# 移动一个光标为单词的位置
+alt + ctrl - h : /usr/local/bin/khd -p "vim + alt - left"
+alt + ctrl - l : /usr/local/bin/khd -p "vim + alt - right"
+
+# 删除前面一个字符
+ctrl - x ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -p "vim - delete"
+
+# 删除后面一个单词
+ctrl - w ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -p "vim + alt - backspace"
+shift + ctrl - w ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -p "vim + alt - delete"
