@@ -1,10 +1,10 @@
 # vi-mode for non-terminal applications
 
 # 启用切换模式
-ctrl - f ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -e "mode activate vim"
+ctrl - f ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -e "mode activate vim" | echo "Vim模式" | /usr/local/bin/alerter -title HKD passthrough -timeout 3
 
 # 恢复默认模式
-vim + ctrl - f ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -e "mode activate default"
+vim + ctrl - f ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -e "mode activate default" | echo "默认模式" | /usr/local/bin/alerter -title HKD passthrough -timeout 3
 
 # 映射上下左右hjkl
 ctrl - h : /usr/local/bin/khd -p "vim - left"
@@ -30,3 +30,7 @@ ctrl - x ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -p "vim - dele
 # 删除后面一个单词
 ctrl - w ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -p "vim + alt - backspace"
 shift + ctrl - w ![HyperTerm,Terminal,iTerm2,MacVim] : /usr/local/bin/khd -p "vim + alt - delete"
+
+# /usr/local/bin/khd kwm on
+# khd mode default color 0xddd75f5f
+# khd mode vim color 0xdd458588
